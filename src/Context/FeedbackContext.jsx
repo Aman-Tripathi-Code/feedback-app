@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import {create, useState} from 'react';
+import { useState} from 'react';
 import {v4 as uuidv4} from 'uuid'
 
 const FeedbackContext = createContext();
@@ -53,8 +53,7 @@ export const FeedbackProvider = ({children}) => {
 
     // Update Feedback
     const updateFeedback = (id, updItem) => {
-        setFeedback(feedback.map((item) => (item.id === id ? { ...item, ...
-        updItem} : item))
+        setFeedback(feedback.map((item) => (item.id === id ? { ...item, ...updItem} : item))
         )
     }
 
